@@ -13,15 +13,15 @@ public class AuthGroups implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long aId;
+    Long id;
 
     @NonNull
     @NotBlank
-    String aUsername;
+    String username;
 
     @NonNull
     @NotBlank
-    String aAuthGroup;
+    String authGroup;
 
 
 
