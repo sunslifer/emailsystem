@@ -37,8 +37,6 @@ public class Users implements Serializable {
 
     String lastName;
 
-    Date dateOfBirth;
-
     String pfpPath;
 
     @ManyToMany(cascade = CascadeType.ALL)

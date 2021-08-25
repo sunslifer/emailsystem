@@ -6,9 +6,6 @@ import org.perscholas.emailsystem.models.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpServlet;
-import java.util.Date;
-
 @Slf4j
 @Service
 public class UsersServices{
@@ -20,14 +17,12 @@ public class UsersServices{
         this.usersRepo = usersRepo;
     }
 
-    public void registerUser(String username, String password, String firstname, String lastname, Date dateOfBirth){
+    public void registerUser(String username, String password, String firstname, String lastname){
         Users user = new Users();
         user.setUserName(username);
         user.setPassword(password);
         user.setFirstName(firstname);
         user.setLastName(lastname);
-        user.setDateOfBirth(dateOfBirth);
-        //user.setFolders();
 
         usersRepo.save(user);
     }
