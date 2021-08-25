@@ -8,10 +8,4 @@ import java.util.List;
 
 @Repository
 public interface EmailsRepo extends JpaRepository<Emails, Long>{
-    List<Emails> getAllByFolderOrderByDateReceivedAsc(String name);
-    List<Emails> getAllByFolderOrderByDateReceivedDesc(String name);
-    List<Emails> getAllByFolderOrderByTitleAsc(String name);
-    List<Emails> getAllByFolderOrderByTitleDesc(String name);
-    List<Emails> getAllByFolderOrderBySenderAsc(String name);
-    List<Emails> getAllByFolderOrderBySenderDesc(String name);
 }

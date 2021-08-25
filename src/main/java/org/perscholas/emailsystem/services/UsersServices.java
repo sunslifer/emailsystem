@@ -6,6 +6,8 @@ import org.perscholas.emailsystem.models.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Slf4j
 @Service
 public class UsersServices{
@@ -30,5 +32,11 @@ public class UsersServices{
     public Users getUserByUserName(String username) {
         return usersRepo.getByUserName(username);
     }
+
+    public String getFirstNameByUserName(String username) {
+        return usersRepo.getByUserName(username).getFirstName();
+    }
+
+    public List<Users> getAllUsers(){ return usersRepo.findAll(); }
 
 }

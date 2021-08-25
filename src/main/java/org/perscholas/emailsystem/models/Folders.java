@@ -19,16 +19,8 @@ import java.util.List;
 public class Folders implements Serializable {
 
     @Id
+    @Column(unique = true)
     String name;
-
-    @GeneratedValue
-    Long folderId;
-
-    Long subfolderId;
-
-    @ManyToOne
-    @JoinColumn(name="userId")
-    Users user;
 
     @ManyToMany(cascade = CascadeType.ALL)
     List<Emails> emails;

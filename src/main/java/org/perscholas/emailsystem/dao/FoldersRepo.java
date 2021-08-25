@@ -7,5 +7,4 @@ import java.util.List;
 
 @Repository
 public interface FoldersRepo extends JpaRepository<Folders, Long>{
-    List<Folders> getByName(String name);
 }

@@ -22,7 +22,7 @@ import java.util.List;
 public class Emails implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long emailId;
 
     @NotNull
@@ -34,12 +34,8 @@ public class Emails implements Serializable {
     @NonNull
     String title;
 
-    String subject;
-
     @NonNull
     String body;
-
-    String folder;
 
     @ManyToMany(mappedBy = "emails")
     List<Folders> folders;

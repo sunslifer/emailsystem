@@ -20,17 +20,9 @@ import java.util.List;
 @Slf4j
 public class Attachments implements Serializable {
 
-    Long userId;
-
     @Id
-    @GeneratedValue
-    Long attachmentId;
-
-    String name;
-
     @NotNull
-    File file;
+    String file;
 
-    @ManyToMany(mappedBy = "attachments")
-    List<Emails> emails;
+    String name = file;
 }
