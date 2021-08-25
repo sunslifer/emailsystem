@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    height:100%;
+}
+
+header {
+    display: flex;
+    height: 20%;
+    color: black;
+}
+
+.lefthead {
+    display: -ms-flexbox;
+}
+
+.righthead1 {
+    display: flex;
+}
+.righthead2 {
+    display: flex;
+}
+
+main {
+    position: relative;
+    top: -3.85%;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+main
+
+li {
+    border-bottom: solid rgb(8, 2, 66);
+    border-width: 1px;
+}
+
+.nav-link {
+    color: #05445E;
+    text-align: center;
+}
+
+.maincontainer {
+    flex-shrink: 0;
+    padding: 1%;
+    border-width: 1px 0;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+td:last-of-type {
+    color:red;
+    font-family: 'Dancing Script', cursive;
+}

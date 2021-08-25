@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="../js/javascript.js"></script>
+        <title>MyMail</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar fixed-top p-3 navbar-light bg-light border-bottom border-dark">
+                <div class="logo_title d-inline col-sm-11">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/logo.jpg" class="logo col-1 d-inline border border-dark" width="15%" height="15%">
+                        <h1 class="logo_text col-3 d-inline" style="font-size: 75px; position: relative; font-weight: 350;">MyMail</h1>
+                    </a>
+                </div>
+                <div class="logo_account d-inline float-end col-xl-1">
+                    <div class="dropdown text-end">
+                        <a href="#" class="navbar-brand dropdown-toggle" id="dropdown1" data-bs-toggle="dropdown">
+                            <img src="../assets/account.jpg" class="account d-inline col-6 d-inline rounded-circle border border-dark" width="10%" height="10%">
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdown1">
+                            <a class="dropdown-item" href="login.html">Sign Out</a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <nav class="sidebar flex-column bg-light border border-dark flex-shrink-0 text-white">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">
+                            Mail
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link">
+                            Sent
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link">
+                            Spam
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="maincontainer container-fluid flex-column flex-shrink-0 bg-light">
+                <a class="d-md-block align-items-center text-decoration-none">
+                    <span class="fs-4">Emails</span>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Sender</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hello</td>
+                                    <td>a@gmail.com</td>
+                                    <td>Today</td>
+                                </tr>
+                                <tr>
+                                    <td>Goodbye</td>
+                                    <td>a@yahoo.com</td>
+                                    <td>1/1/2021</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <div class="foot container-fluid">
+                
+            </div>
+        </footer>
+    </body>
+
+    <footer>
+
+    </footer>
+</html>
