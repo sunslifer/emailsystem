@@ -31,7 +31,9 @@
                             <img src="../assets/account.jpg" class="account d-inline col-6 d-inline rounded-circle border border-dark" width="10%" height="10%">
                         </a>
                         <ul class="dropdown-menu text-small" aria-labelledby="dropdown1">
-                            <a class="dropdown-item" href="login.html">Sign Out</a>
+                            <a class="dropdown-item" href="/account">Account</a>
+                            <a class="dropdown-item" href="/listusers">List Users</a>
+                            <a class="dropdown-item" href="/login">Sign Out</a>
                         </ul>
                     </div>
                 </div>
@@ -81,14 +83,17 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="foot container-fluid">
+                        <form action="/compose">
+                            <input type="submit" value="Compose" />
+                        </form>
+                     </div>
                 </a>
             </div>
         </main>
 
         <footer>
-            <div class="foot container-fluid">
-                
-            </div>
+
         </footer>
     </body>
 

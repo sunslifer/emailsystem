@@ -37,7 +37,7 @@ public class EmailsServices {
         emailsRepo.save(email);
     }
 
-    public static Date getCurrentTimeUsingCalendar() {
+    public Date getCurrentTimeUsingCalendar() {
         Calendar cal = Calendar.getInstance();
         Date date = cal.getTime();
         return date;

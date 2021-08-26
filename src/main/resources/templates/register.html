@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,28 +26,21 @@
             </header>
 
         <div class="register">
-            <form action="" name="myForm" method="" id="formone">
+            <form action="#" th:action="@{/register}" method="post" th:object="${user}">
                 <div class="mb-3">
-                    <label for="Email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="Email" required>
-                </div>
-                <div class="mb-3">
+                    <label for="Username" class="form-label">Username</label>
+                    <input type="text" th:field="*{userName}" class="form-control" id="Username" required>
+
                     <label for="Password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="Password" required>
+                    <input type="text" th:field="*{password}" class="form-control" id="Password" required>
+
+                    <label for="Firstname" class="form-label">Firstname</label>
+                    <input type="text" th:field="*{firstName}" class="form-control" id="Firstname" required>
+
+                    <label for="Lastname" class="form-label">Lastname</label>
+                    <input type="text" th:field="*{lastName}" class="form-control" id="Lastname" required>
                 </div>
-                <div class="mb-3">
-                    <label for="Name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="Name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="Phone" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" id="Phone" required>
-                </div>
-                <div class="mb-3">
-                    <label for="Birthday" class="form-label">Birthday</label>
-                    <input type="date" class="form-control" id="Birthday" required>
-                </div>
-                <div id="emailHelp" class="form-text">Please double check all info.</div>
+                <div id="help" class="form-text">Please double check all info.</div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
