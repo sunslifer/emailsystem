@@ -1,7 +1,6 @@
 package org.perscholas.emailsystem;
 
 import lombok.extern.java.Log;
-import org.perscholas.emailsystem.dao.UsersRepo;
 import org.perscholas.emailsystem.models.*;
 import org.perscholas.emailsystem.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,19 +8,19 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
-import javax.validation.constraints.Email;
-import java.util.List;
-import java.util.function.Supplier;
 
 @Component
 @Log
 @Transactional
 public class AppRunner implements CommandLineRunner {
-    UsersServices usersServices;
-    EmailsServices emailsServices;
-    ContactsServices contactsServices;
-    FoldersServices foldersServices;
-    AttachmentsServices attachmentsServices;
+
+    public static Users currUser = new Users();
+
+    private UsersServices usersServices;
+    private EmailsServices emailsServices;
+    private ContactsServices contactsServices;
+    private FoldersServices foldersServices;
+    private AttachmentsServices attachmentsServices;
 
     @Autowired
     public AppRunner(UsersServices usersServices,
@@ -60,7 +59,7 @@ public class AppRunner implements CommandLineRunner {
 
         log.info("---------------TESTING-----------------");
 
-        log.info(usersServices.getFirstNameByUserName("admin"));
+        log.info(usersServices.getFirstNameByUserName("admin", currUser.getPassword()));
 
         for(Users users : usersServices.getAllUsers()) {
             log.info(users.getFirstName());
@@ -83,7 +82,7 @@ public class AppRunner implements CommandLineRunner {
         }
 
         usersServices.updateUserFirstName("123", "Chuck");
-        log.info(usersServices.getFirstNameByUserName("123"));
+        log.info(usersServices.getFirstNameByUserName("123", currUser.getPassword()));
 
 
     }

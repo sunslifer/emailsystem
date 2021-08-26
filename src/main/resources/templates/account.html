@@ -15,10 +15,10 @@
     <title>MyMail</title>
 </head>
 <body>
-<form action="#" th:action="@{/account}" method="post" th:object="${name}">
+<form action="#" th:action="@{/account}" method="post" th:object="${user}">
     <div class="mb-3">
         <label for="Firstname" class="form-label">Firstname</label>
-        <input type="text" th:field="*{}" class="form-control" id="Firstname" required>
+        <input type="text" th:field="*{firstName}" class="form-control" id="Firstname" required>
     </div>
     <div id="help" class="form-text">Please double check all info.</div>
     <button type="submit" class="btn btn-primary">Submit</button>

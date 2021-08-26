@@ -7,6 +7,8 @@ import org.perscholas.emailsystem.models.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Slf4j
@@ -35,7 +37,7 @@ public class UsersServices{
         return usersRepo.getByUserName(username);
     }
 
-    public String getFirstNameByUserName(String username) {
+    public String getFirstNameByUserName(String username, @NotNull @NotBlank String password) {
         return usersRepo.getByUserName(username).getFirstName();
     }
 
@@ -44,6 +46,10 @@ public class UsersServices{
     public void updateUserFirstName(String username, String fname) {
         usersRepo.getByUserName(username).setFirstName(fname);
         log.info("update successful");
+    }
+
+    public Users getUserByUserNameAndPassword(String name, String pass) {
+        return usersRepo.findByUserNameAndPassword(name, pass);
     }
 
 }
