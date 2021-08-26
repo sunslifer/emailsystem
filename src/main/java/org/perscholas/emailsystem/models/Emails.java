@@ -28,7 +28,7 @@ public class Emails implements Serializable {
     Long userId;
 
     @NotNull
-    String dateReceived;
+    Date dateReceived;
 
     @NotNull
     String sender;

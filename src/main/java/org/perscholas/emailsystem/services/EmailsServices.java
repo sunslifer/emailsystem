@@ -37,12 +37,10 @@ public class EmailsServices {
         emailsRepo.save(email);
     }
 
-    public static String getCurrentTimeUsingCalendar() {
+    public static Date getCurrentTimeUsingCalendar() {
         Calendar cal = Calendar.getInstance();
         Date date = cal.getTime();
-        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-        String formattedDate = dateFormat.toString();
-        return formattedDate;
+        return date;
     }
 
     public List<Emails> getAllEmails(){ return emailsRepo.findAll(); }

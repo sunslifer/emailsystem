@@ -64,23 +64,20 @@
                     <div class="table-responsive">
                         <table class="table table-striped table-sm">
                             <thead>
-                                <tr>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Sender</th>
-                                    <th scope="col">Date</th>
-                                </tr>
+                            <tr>
+                                <th>Title</th>
+                                <th>Body</th>
+                                <th>Sender</th>
+                                <th>Date Recieved</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Hello</td>
-                                    <td>a@gmail.com</td>
-                                    <td>Today</td>
-                                </tr>
-                                <tr>
-                                    <td>Goodbye</td>
-                                    <td>a@yahoo.com</td>
-                                    <td>1/1/2021</td>
-                                </tr>
+                            <tr th:each="email : ${emails}">
+                                <td><span th:text="${email.title}">Username</span></td>
+                                <td><span th:text="${email.body}">Username</span></td>
+                                <td><span th:text="${email.sender}">Username</span></td>
+                                <td><span th:text="${email.dateReceived}">Username</span></td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
