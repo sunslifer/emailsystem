@@ -1,6 +1,7 @@
 package org.perscholas.emailsystem.services;
 
 import lombok.extern.slf4j.Slf4j;
+import org.perscholas.emailsystem.dao.EmailsRepo;
 import org.perscholas.emailsystem.dao.UsersRepo;
 import org.perscholas.emailsystem.models.Users;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import java.util.List;
 public class UsersServices{
 
     private UsersRepo usersRepo;
+    private EmailsRepo emailsRepo;
 
     @Autowired
     public UsersServices(UsersRepo usersRepo) {

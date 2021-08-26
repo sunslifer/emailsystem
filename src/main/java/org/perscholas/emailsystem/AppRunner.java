@@ -9,6 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
+import javax.validation.constraints.Email;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -44,9 +45,9 @@ public class AppRunner implements CommandLineRunner {
         usersServices.registerUser("admin", "pass", "Kyle", "Wilson");
         usersServices.registerUser("123", "123", "Bob", "Smith");
 
-        emailsServices.addEmail("Hello", "Lets have lunch.");
-        emailsServices.addEmail("Steve Blake", "I saw Steve Blake at a grocery store in Los Angeles yesterday.");
-        emailsServices.addEmail("Goodbye", "I will miss you.");
+        emailsServices.addEmail(usersServices.getUserByUserName("admin").getUserId(), "Hello", "Lets have lunch.","Mom", foldersServices.getFolderByName("Main"));
+        emailsServices.addEmail(usersServices.getUserByUserName("admin").getUserId(), "Steve Blake", "I saw Steve Blake at a grocery store in Los Angeles yesterday.","Mom", foldersServices.getFolderByName("Main"));
+        emailsServices.addEmail(usersServices.getUserByUserName("admin").getUserId(), "Goodbye", "I will miss you.","Mom", foldersServices.getFolderByName("Main"));
 
         contactsServices.addContact("abc", "Dan", "Theman");
         contactsServices.addContact("123", "Frank", "Thetank");
@@ -83,6 +84,7 @@ public class AppRunner implements CommandLineRunner {
 
         usersServices.updateUserFirstName("123", "Chuck");
         log.info(usersServices.getFirstNameByUserName("123"));
+
 
     }
 }

@@ -22,13 +22,13 @@ public class Emails implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int emailId;
+    Long emailId;
 
     @NotNull
     Long userId;
 
     @NotNull
-    Date dateReceived;
+    String dateReceived;
 
     @NotNull
     String sender;

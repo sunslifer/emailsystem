@@ -26,4 +26,6 @@ public class FoldersServices{
 
     public List<Folders> getAllFolders() { return foldersRepo.findAll(); }
 
+    public List<Folders> getFolderByName(String name) { return foldersRepo.findFoldersByName(name); }
+
 }
