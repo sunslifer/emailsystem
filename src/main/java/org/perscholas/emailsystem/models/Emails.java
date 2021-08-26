@@ -16,7 +16,6 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 @ToString
 @Slf4j
 public class Emails implements Serializable {
@@ -24,6 +23,9 @@ public class Emails implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long emailId;
+
+    @NotNull
+    Long userId;
 
     @NotNull
     Date dateReceived;
