@@ -22,7 +22,5 @@ public class Folders implements Serializable {
     @Column(unique = true)
     String name;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    List<Emails> emails;
 
 }

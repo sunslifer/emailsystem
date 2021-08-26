@@ -40,7 +40,7 @@ public class Users implements Serializable {
     String pfpPath;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    List<Folders> folders;
+    List<Emails> emails;
 
     @ManyToMany(cascade = CascadeType.ALL)
     List<Contacts> contacts;

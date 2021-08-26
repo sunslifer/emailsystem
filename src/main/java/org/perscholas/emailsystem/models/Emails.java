@@ -28,16 +28,16 @@ public class Emails implements Serializable {
     @NotNull
     Date dateReceived;
 
-    @NonNull
+    @NotNull
     String sender;
 
-    @NonNull
+    @NotNull
     String title;
 
-    @NonNull
     String body;
 
-    @ManyToMany(mappedBy = "emails")
+    @ManyToMany(cascade = CascadeType.ALL)
+    @NotNull
     List<Folders> folders;
 
     @ManyToMany(cascade = CascadeType.ALL)
