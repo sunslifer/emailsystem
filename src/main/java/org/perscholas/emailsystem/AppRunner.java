@@ -81,15 +81,8 @@ public class AppRunner implements CommandLineRunner {
             log.info(attachments.getFile());
         }
 
-
-
-
-
-
-
-
-
-
+        usersServices.updateUserFirstName("123", "Chuck");
+        log.info(usersServices.getFirstNameByUserName("123"));
 
     }
 }

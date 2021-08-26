@@ -39,4 +39,9 @@ public class UsersServices{
 
     public List<Users> getAllUsers(){ return usersRepo.findAll(); }
 
+    public void updateUserFirstName(String username, String fname) {
+        usersRepo.getByUserName(username).setFirstName(fname);
+        log.info("update successful");
+    }
+
 }

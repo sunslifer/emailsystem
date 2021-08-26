@@ -7,6 +7,7 @@ import org.perscholas.emailsystem.models.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.validation.constraints.Email;
 import java.util.List;
 
 @Slf4j
@@ -28,5 +29,7 @@ public class EmailsServices {
     }
 
     public List<Emails> getAllEmails(){ return emailsRepo.findAll(); }
+
+
 
 }

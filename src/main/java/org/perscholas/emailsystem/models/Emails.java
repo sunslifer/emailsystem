@@ -22,7 +22,7 @@ public class Emails implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long emailId;
+    int emailId;
 
     @NotNull
     Long userId;
